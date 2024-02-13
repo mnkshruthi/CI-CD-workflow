@@ -1,0 +1,22 @@
+name: Custom Env variables
+
+on:
+  workflow_dispatch:
+
+env:
+  ENV_VAR: "Hello world!"
+  testvar: "value_1"
+
+jobs:
+  env-var:
+    runs-on: ubuntu-latest
+
+    env:
+      GREETINGS: "Hello shruthi"
+
+    steps:
+      - name: This is a custom env variables job
+        run: |
+          echo $ENV_VAR,
+          echo $testvar.
+          echo $GREETINGS
