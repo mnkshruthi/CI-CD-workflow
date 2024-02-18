@@ -1,0 +1,21 @@
+name: Github dedault environemnt variables
+
+on: workflow_dispatch
+
+jobs:
+  Github_environemnt_variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print values of env variables
+        run: |
+          echo "$GITHUB_ACTION"
+          echo "$GITHUB_ENV"
+          echo "$GITHUB_API_URL"
+          echo "$GITHUB_JOB"
+          echo "$GITHUB_PATH"
+          echo "$GITHUB_STEP_SUMMARY"
+          echo "$GITHUB_WORKFLOW"
+          echo "GITHUB_REPOSITORY_OWNER"
+          echo "$GITHUB_RUN_NUMBER"
+          echo "$GITHUB_SERVER_URL"
+          echo "$RUNNER_NAME"
