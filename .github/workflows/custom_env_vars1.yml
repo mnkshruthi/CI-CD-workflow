@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is the first custom variable workflow
+        run: |
+          echo "action_state=red" >> $GITHUB_COLOR
+          echo "${{ env.action_state  }}"
