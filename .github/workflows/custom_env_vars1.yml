@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: This is the first custom variable workflow
         run: |
-          echo "action_state=red" >> $GITHUB_COLOR
-          echo "${{ env.action_state  }}"
+          echo "action_state=red" >> $GITHUB_ENV
+          echo $action_state
