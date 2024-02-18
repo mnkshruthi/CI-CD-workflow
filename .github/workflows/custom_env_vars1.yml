@@ -7,7 +7,9 @@ jobs:
   job-title:
     runs-on: ubuntu-latest
     steps:
-      - name: This is the first custom variable workflow
+      - name: Set Custom variable
         run: |
           echo "action_state=red" >> $GITHUB_ENV
-          echo "$action_state"
+
+      - name: Display custom variable
+        run: echo "$action_state"
