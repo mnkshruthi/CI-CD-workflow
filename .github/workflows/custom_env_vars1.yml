@@ -12,4 +12,6 @@ jobs:
           echo "action_state=red" >> $GITHUB_ENV
 
       - name: Display custom variable
-        run: echo "$action_state"
+        run: |
+          echo "$action_state"
+          echo "${{ env.action_state }}"
